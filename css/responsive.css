@@ -1,0 +1,49 @@
+@media (max-width: 1200px) {
+    .navbar-default {
+      font-size: 13px;
+    }
+}
+
+@media (max-width: 992px) {
+    .menu-des {
+        padding-top: 1em;
+        position: fixed;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 75%;
+        background: #fff;
+        z-index: 100001;
+        opacity: .8;
+        justify-items: center;
+        text-align: center;
+        border-bottom: solid 1px #6b6767;
+    }
+
+    .navbar-default .ul-main{
+        width: 100%;
+    }
+
+    .ul-main .menu{
+        width: 75%;
+        margin: auto;
+        background: #607d8b;
+    }
+
+    .navbar-default .menu li a{
+        text-align: center;
+        color: #fff;
+    }
+
+    .navbar-default .menu li a:hover{
+        text-align: center;
+        color: black;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .footer .footer-dir{
+        text-align: center;
+    }
+}

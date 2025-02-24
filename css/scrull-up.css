@@ -1,0 +1,111 @@
+@font-face {
+    font-family: "Geist Sans";
+    src: url("https://assets.codepen.io/605876/GeistVF.ttf") format("truetype");
+}
+
+#scrollUp button {
+    height: 80px; /* Ajusta la altura según sea necesario */
+    width: 30px; /* Ajusta el ancho según sea necesario */
+    padding: 0;
+    display: grid;
+    border-radius: 8px;
+    border: 2px solid #00b5e2;
+    cursor: pointer;
+    position: relative;
+    background: #003b5c;
+    color: white;
+    scale: 1;
+    outline-color: #00b5e2;
+    outline-offset: 0.25rem;
+    writing-mode: vertical-rl; /* Cambia la orientación del texto */
+    transform: rotate(180deg); /* Rota el botón 180 grados */
+}
+
+#scrollUp button:is(:hover, :focus-visible) {
+    --active: 1;
+}
+
+#scrollUp button:active {
+    --pressed: 1;
+}
+
+#scrollUp button > span:nth-of-type(1) {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    position: absolute;
+    inset: 0;
+    scale: calc(1 - (var(--pressed, 0) * 0.05));
+    transition: scale 0.1s;
+}
+
+#scrollUp button:is(:hover, :focus-visible) .container-button {
+    height: 100%;
+}
+
+.container-button {
+    --mask-image: url(../images/iconos/chev-mask_2.png);
+    --spread: 24px;
+    --size: 28px;
+    height: 25px;
+    width: 100%;
+    background: #00b5e2;
+    position: absolute;
+    top: 0;
+    transition: height 0.25s;
+    border-radius: 6px;
+    box-shadow: 0 10px 10px -5px hsl(0 0% 0% / 0.5);
+    container-type: inline-size;
+    transform: rotate(180deg); 
+}
+
+.primary {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: hsl(0 0% 0% / 0.15);
+    z-index: 2;
+    mask: var(--mask-image) 50% 50% / var(--size) var(--size) no-repeat;
+    container-type: inline-size;
+}
+
+:where(.primary, .complimentary)::after {
+    --distance: calc(100cqi + 100%);
+    content: "";
+    width: calc(var(--size) * 4);
+    aspect-ratio: 1;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    translate: -50% -50%;
+    background: radial-gradient(hsl(0 0% 0%), transparent);
+    animation: fly-by calc((2 - var(--active, 0)) * 1s) infinite linear;
+}
+
+@keyframes fly-by {
+    0% { translate: -50% 0%; }
+    100% { translate: -50% -100%; }
+}
+
+.complimentary {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: var(--active, 0);
+    transition: opacity 0.25s;
+    background: hsl(0 0% 0% / 0.15);
+    mask:
+        var(--mask-image) 50% calc(50% - (var(--spread) * 1)) / var(--size) var(--size) no-repeat,
+        var(--mask-image) 50% calc(50% - (var(--spread) * 2)) / var(--size) var(--size) no-repeat,
+        var(--mask-image) 50% calc(50% - (var(--spread) * 3)) / var(--size) var(--size) no-repeat,
+        var(--mask-image) 50% calc(50% + (var(--spread) * 1)) / var(--size) var(--size) no-repeat,
+        var(--mask-image) 50% calc(50% + (var(--spread) * 2)) / var(--size) var(--size) no-repeat,
+        var(--mask-image) 50% calc(50% + (var(--spread) * 3)) / var(--size) var(--size) no-repeat;
+}
+
+#scrollUp button > span:nth-of-type(2) {
+    padding: calc(6px + 1.1rem) 0 1.1rem 0;
+    display: grid;
+    place-items: center;
+    width: 100%;
+}

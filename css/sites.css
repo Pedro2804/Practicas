@@ -1,0 +1,181 @@
+.cont-nosotros {
+    padding-top: 7em;
+    background-color: #fff;
+}
+
+.header-nosotros{
+    margin-bottom: 1em;
+    color: #003b5c;
+}
+
+.lista-nosotros{
+    background: #eaeaea;
+    padding: 1em;
+}
+
+.lista-nosotros .nosotros {
+    margin-left: 2em;
+    display: block;
+    margin-bottom: 1em;
+}
+
+.nosotros div{
+    width: 95%;
+    margin: auto;
+    color: #003b5c;
+    font-size: small;
+    margin-bottom: .5em;
+}
+
+.nosotros .cargo{
+    color: #003b5c;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.nosotros span{
+    display: inline-block;
+    width:50px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.nosotros a{
+    color: #003b5c;
+}
+
+.nosotros a:hover{
+    color: #00b5e2;
+    text-decoration: underline;
+}
+
+.organigrama{
+    background: #eaeaea;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+.cont-nosotros .contacto{
+    background: #eaeaea;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+.cont-nosotros .identidad{
+    background: #eaeaea;
+    padding: 1.5em;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 1em;
+    color: #003b5c;
+    text-align: center;
+}
+
+.cont-nosotros .identidad ul{
+    list-style: none;
+
+}
+
+.docente{
+    padding-top: 7em;
+    background-color: #fff;
+    margin-bottom: 1em;
+}
+
+.plantilla-docente{
+    background: #eaeaea;
+}
+
+.plantilla-docente div{
+    text-align: center;
+    padding: 2em;
+}
+
+.plantilla-docente div a{
+    border: solid 1px #607d8b;
+    border-radius: 3px;
+    padding: 0.5em;
+    color: #003b5c;
+    position: relative;
+    z-index: 1;
+}
+
+.plantilla-docente div a:hover{
+    color: #fff;
+    border: none;
+}
+
+.docente .plantilla-docente > div > a:before {
+    content: '';
+    z-index: -1;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 0px;
+    background: #00b5e2;
+    height: 100%;
+    width: 0;
+    right: 0;
+    
+	-webkit-transition:.5s all;
+	-moz-transition:.5s all;
+	-o-transition:.5s all;
+	-ms-transition:.5s all;
+	transition:.5s all;
+}
+
+.docente .plantilla-docente div a:hover:before, .docente .plantilla-docente div a.active:before{
+	width: 100%;
+}
+
+.texto{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2em;
+}
+
+.titulo{
+    color:#003b5c;
+    text-align: center; 
+    margin-bottom: 11px;
+    font-size: 16pt;
+    line-height:107%;
+    font-family: 'Source Sans Pro', Aptos, sans-serif;
+}
+
+.subrrayado{
+    font-size: 13pt;
+    text-align: left;
+    background: #e9d2fd;
+    padding: 5px;
+    color: black;
+}
+
+.parrafo{
+    font-size: 12pt;
+    line-height: 12pt;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align:justify;
+    color:#2c3e50;
+}
+
+.lista{
+    margin-bottom: 11px;
+}
+
+.parrafo .bold{
+    color:#003b5c;
+    font-size: 12.5pt;
+}
+
+ul{
+    color:#003b5c;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    line-height: 12pt;
+}
+
+ol{
+    list-style-type:upper-roman;
+    text-align:justify;
+}
+
